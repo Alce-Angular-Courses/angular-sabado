@@ -1,0 +1,7 @@
+<h2> {{ titulo.toUpperCase() }}</h2>
+<input type="text" [placeholder]="mensajes[1]"
+    [(ngModel)]="nombre">
+<!--  [value]="nombre" (input)=""-->
+<p [title]="mensajes[0]">Hola {{ nombre ? nombre : 'amigo' }}</p>
+<!-- <button (click)=" nombre = '' ">Borrar</button> -->
+<button (click)="onClickBorrar($event)">Borrar</button>

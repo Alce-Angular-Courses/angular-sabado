@@ -6,6 +6,4 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Angular Sabados en CAS';
-  logo = '../assets/logo_angular.svg';
 }

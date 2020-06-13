@@ -1,0 +1,15 @@
+:host {
+    margin: 3rem;
+}
+ul{
+    list-style: none;
+    display: flex;
+}
+li {
+    display: inline-block;
+    padding: 1rem 2rem;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+}

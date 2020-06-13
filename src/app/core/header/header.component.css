@@ -1,0 +1,23 @@
+
+:host {
+    display: block;
+    background-color: brown;
+    color: beige;
+    padding: 1rem;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header {
+    flex: 20 0 auto;
+    text-align: center;
+}
+.img-wrapper {
+    flex: 1 0 auto;
+}
+img {
+    width: 100%;
+}
