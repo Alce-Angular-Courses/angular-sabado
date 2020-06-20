@@ -5,10 +5,11 @@ import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home.component';
 import { SaludoComponent } from './saludo/saludo.component';
 import { FormsModule } from '@angular/forms';
+import { SaludoRefComponent } from './saludo-ref/saludo-ref.component';
 
 
 @NgModule({
-  declarations: [HomeComponent, SaludoComponent],
+  declarations: [HomeComponent, SaludoComponent, SaludoRefComponent],
   imports: [
     CommonModule,
     FormsModule,

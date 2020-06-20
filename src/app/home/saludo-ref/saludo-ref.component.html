@@ -1,0 +1,12 @@
+
+<h2 class="h2like">saludo-ref </h2>
+<!-- referencias locales -->
+<input type="text" placeholder="Dime tu nombre" id='nombre'
+    #refNombre>
+<!--  [value]="nombre" (input)=""-->
+<p title="Esto es un saludo">
+    Hola {{ refNombre.value ? refNombre.value : 'amigo' }}
+</p>
+<!-- <button (click)=" nombre = '' ">Borrar</button> -->
+<button (click)=" refNombre.value = refNombre.value ">Guardar</button>
+<button (click)=" refNombre.value = '' ">Borrar</button>
