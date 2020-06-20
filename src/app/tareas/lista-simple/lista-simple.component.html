@@ -1,0 +1,7 @@
+<h2> lista-simple</h2>
+<input type="text" placeholder="Describe la tarea"
+    [(ngModel)]="nuevaTarea.nombre">
+<input type="text" placeholder="Responsable de la tarea"
+    [(ngModel)]="nuevaTarea.responsable">
+
+<button (click)="addTarea($event)">Añanir</button>
