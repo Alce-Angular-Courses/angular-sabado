@@ -1,0 +1,14 @@
+<h2>lista controlador/presentadores</h2>
+<cas-nueva (addTarea)="onAddTarea($event)"></cas-nueva>
+
+<div *ngIf="tareas.length; else mensajeInicial">
+    <h3>Lista de tareas</h3>
+    <ul>
+        <cas-tarea *ngFor="let item of tareas; let i = index"
+            [tarea]="item"></cas-tarea>
+    </ul>
+</div>
+
+<ng-template #mensajeInicial>
+    <p>Animate añadir tu primera tarea</p>
+</ng-template>

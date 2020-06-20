@@ -3,5 +3,21 @@
     [(ngModel)]="nuevaTarea.nombre">
 <input type="text" placeholder="Responsable de la tarea"
     [(ngModel)]="nuevaTarea.responsable">
-
 <button (click)="addTarea($event)">Añanir</button>
+
+<div *ngIf="tareas.length; else mensajeInicial">
+    <h3>Lista de tareas</h3>
+    <ul>
+        <li *ngFor="let item of tareas; let i = index">
+            <input type="checkbox" [(ngModel)]="item.isCompleted"
+                (change)="onChangeCompleted()"> 
+            <span [ngClass]="{completed: item.isCompleted}">Tarea: {{item.nombre}}</span> |
+            <span [ngClass]="{completed: item.isCompleted}">Responsable: {{item.responsable}}</span> |
+            <span class="boton" (click)="deleteTarea(i)">🗑</span>
+        </li>
+    </ul>
+</div>
+
+<ng-template #mensajeInicial>
+    <p>Animate añadir tu primera tarea</p>
+</ng-template>

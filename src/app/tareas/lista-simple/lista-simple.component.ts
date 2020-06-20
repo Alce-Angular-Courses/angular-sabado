@@ -9,11 +9,14 @@ import { Tarea } from 'src/app/models/tarea';
 export class ListaSimpleComponent implements OnInit {
   nuevaTarea: Tarea;
   tareas: Array<Tarea>;
+  store: string;
   constructor() { }
 
   ngOnInit(): void {
+    this.store = 'tareas';
     this.nuevaTarea = new Tarea();
-    this.tareas = [];
+    this.tareas = localStorage.getItem(this.store)
+    ? JSON.parse(localStorage.getItem(this.store)) : [];
   }
 
   addTarea(ev) {
@@ -22,7 +25,20 @@ export class ListaSimpleComponent implements OnInit {
     }
     this.tareas.push( this.nuevaTarea );
     this.nuevaTarea = new Tarea();
-    console.log(this.tareas);
+    this.updateStorage();
   }
 
+  onChangeCompleted() {
+    this.updateStorage();
+  }
+
+  deleteTarea(i: number) {
+    this.tareas.splice(i, 1);
+    this.updateStorage();
+  }
+
+  private updateStorage() {
+    localStorage.setItem(this.store, JSON.stringify(this.tareas));
+    console.log(this.tareas);
+  }
 }

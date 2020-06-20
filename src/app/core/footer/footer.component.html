@@ -1,4 +1,5 @@
 <footer>
-    <address> {{ author }}</address>
-    <p> {{ hoy.toLocaleDateString() }}</p>
+    <address> {{ author | uppercase }}</address>
+    <!-- <p> {{ hoy | date : 'fullDate' : null : 'es' | titlecase }}</p> -->
+    <p> {{ hoy | date : 'fullDate' | titlecase }}</p>
 </footer>
