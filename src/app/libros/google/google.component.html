@@ -1,0 +1,17 @@
+<h2>Busqueda de libros en Google</h2>
+<input type="text" name="" placeholder="Clave de busqueda"
+    [(ngModel)]="clave">
+<div>
+    <button (click)="onBuscar()">Buscar</button>
+</div>
+<div *ngIf="libros.length">
+    <h2>Resultados</h2>
+    <ul>
+        <li *ngFor="let item of libros">
+            {{item}}
+        </li>
+    </ul>
+</div>
+<div>
+    {{ msgError }}
+</div>
