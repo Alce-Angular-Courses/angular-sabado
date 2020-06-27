@@ -5,7 +5,8 @@
     <h3>Lista de tareas</h3>
     <ul>
         <cas-tarea *ngFor="let item of tareas; let i = index"
-            [tarea]="item"></cas-tarea>
+            [tarea]="item" [index]="i"
+            (changeCompleted)="onChangeCompleted($event)"  (deleteTarea)="onDelete($event)"></cas-tarea>
     </ul>
 </div>
 

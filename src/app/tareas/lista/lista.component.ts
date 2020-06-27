@@ -16,7 +16,17 @@ export class ListaComponent implements OnInit {
 
   onAddTarea(tarea: Tarea) {
     this.tareas.push(tarea);
-    console.log(this.tareas)
+    console.log(this.tareas);
+  }
+
+  onChangeCompleted(i: number) {
+    this.tareas[i].isCompleted = !this.tareas[i].isCompleted;
+    console.log(this.tareas);
+  }
+
+  onDelete(i: number) {
+    this.tareas.splice(i, 1);
+    console.log(this.tareas);
   }
 
 }
