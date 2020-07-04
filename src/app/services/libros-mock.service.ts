@@ -21,7 +21,7 @@ export class LibrosMockService {
     }
   }
 
-  buscarAsync(clave: string): Promise< Array<string>> {
+  buscarAsync(clave: string): Promise<Array<string>> {
     return new Promise( (resolve, reject) => {
       setTimeout(() => {
         if (clave.toLowerCase() === 'angular') {

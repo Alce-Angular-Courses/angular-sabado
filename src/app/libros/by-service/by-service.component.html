@@ -1,9 +1,8 @@
-<h2>Busqueda de libros en Google</h2>
+<h2>Busqueda de libros en Google usando nuestro servicio</h2>
 <input type="text" name="" placeholder="Clave de busqueda"
     [(ngModel)]="clave">
 <div>
     <button (click)="onBuscar()">Buscar</button>
-    <button (click)="onBuscarRx()">BuscarRx</button>
 </div>
 <div *ngIf="libros.length">
     <h2>Resultados</h2>
