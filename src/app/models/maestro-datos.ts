@@ -1,4 +1,4 @@
-class MaestroDatos {
+export class MaestroDatos {
     constructor(
         public id: string = '',
         public nombre: string = '',

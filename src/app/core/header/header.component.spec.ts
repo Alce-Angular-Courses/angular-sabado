@@ -22,4 +22,17 @@ describe('HeaderComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it(`should have as title 'Angular Sábados en CAS'`, () => {
+    expect(component.title).toEqual('Angular Sábados en CAS');
+  });
+
+  it('should render title', () => {
+    const render = fixture.nativeElement;
+    fixture.detectChanges();
+    expect(render.querySelector('h1').textContent).toContain('Angular');
+  });
+
 });
+
+

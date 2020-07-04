@@ -1,0 +1,29 @@
+<p>usuarios works!</p>
+<button (click)="list()"> Ver todos</button>
+
+<ul>
+    <li *ngFor="let item of usuarios">
+        {{item.id}} - {{item.username}}
+    </li>
+</ul>
+
+<div>
+    <input type="text" name="" placeholder="Id del usuario" [(ngModel)]="userId">
+    <button (click)="read()" >Ver</button>
+    <button (click)="delete()"> Borrar</button>
+    <button (click)="create()"> Crear</button>
+    <button (click)="update()">Cambiar</button>
+</div>
+
+<div>
+    <input type="text" name="" [(ngModel)]="usuario.id" disabled>
+</div>
+<div>
+    <input type="text" name="" [(ngModel)]="usuario.username">
+</div>
+<div>
+    <input type="text" name="" [(ngModel)]="usuario.correo">
+</div>
+
+
+

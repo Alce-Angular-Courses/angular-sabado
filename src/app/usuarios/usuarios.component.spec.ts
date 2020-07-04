@@ -1,22 +1,22 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { GoogleComponent } from './google.component';
+import { UsuariosComponent } from './usuarios.component';
 import { HttpClientModule } from '@angular/common/http';
 
-describe('GoogleComponent', () => {
-  let component: GoogleComponent;
-  let fixture: ComponentFixture<GoogleComponent>;
+describe('UsuariosComponent', () => {
+  let component: UsuariosComponent;
+  let fixture: ComponentFixture<UsuariosComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ GoogleComponent ],
+      declarations: [ UsuariosComponent ],
       imports: [HttpClientModule]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(GoogleComponent);
+    fixture = TestBed.createComponent(UsuariosComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

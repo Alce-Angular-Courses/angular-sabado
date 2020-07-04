@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class HeaderComponent implements OnInit {
   title: string;
   logo: any;
-  constructor() { 
+  constructor() {
     this.title = 'Angular Sábados en CAS';
     this.logo = {
       src: '../assets/logo_angular.svg',
